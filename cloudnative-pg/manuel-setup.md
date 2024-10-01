@@ -1,22 +1,22 @@
-# CloudNativePG Setup and PostgreSQL Connection via DBeaver
+# CloudNative-PG Setup and PostgreSQL Connection via DBeaver
 
-This document walks you through the setup of CloudNativePG on a Kubernetes cluster, exposing the PostgreSQL database externally, and connecting to it using DBeaver.
+This document walks you through the setup of CloudNative-PG on a Kubernetes cluster, exposing the PostgreSQL database externally, and connecting to it using DBeaver.
 
-## Add the CloudNativePG Helm Repository
+## Add the CloudNative-PG Helm Repository
 
-First, add the official CloudNativePG Helm chart repository to Helm:
+First, add the official CloudNative-PG Helm chart repository to Helm:
 
 ```bash
-# Add the CloudNativePG Helm repository
+# Add the CloudNative-PG Helm repository
 helm repo add cloudnative-pg https://cloudnative-pg.io/charts/
 ```
 ```bash
 # Update your local Helm repository
 helm repo update
 ```
-## Install CloudNativePG using Helm
+## Install CloudNative-PG using Helm
 ```bash
-# Install CloudNativePG using Helm
+# Install CloudNative-PG using Helm
 helm install cloudnative-pg cloudnative-pg/cloudnative-pg --version 0.22.0 -n cloudnative-pg --create-namespace --set service.type=LoadBalancer
 ```
 ```bash
